@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+
+<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png') }}" />
+
+<title>Burke and Hare</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='scripts/story_display_controller.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/content.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/story_content.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/audio_player.css') }}" type="text/css">
+
+</head>
+
+<body>
+<div id="background">
+    <img src="{{ url_for('static', filename='images/background.jpg') }}" class="stretch" alt=""/>
+</div>
+
+<content>
+    <div id="story_book_container" class="story_book_initial_view">        	
+        <div id="story_book_image">
+            <img src="{{ url_for('static', filename='images/old_open_book.png') }}" style="height:100%; width:100%; object-fit: fill" height="100%" alt=""/>
+            <div id="story_book_left_page">
+        <div id="story_book_logo"><img src="{{ url_for('static', filename='images/logo.png') }}" width="100%" height="100%" alt=""/></div>
+        
+        	<div id="chapter_title_container">
+        		<div class="story_chapter_title"><span id="chapter_no_text"></span><br><span id="chapter_title_text"></span></div>
+            </div>
+            <div id="story_chapter_images_container">
+                <!--  -->
+                <div id="story_main_img_container">
+                	<div class="story_chapter_map_image"><img id="chapter_map_img" src="" height="100%" alt=""/></div>
+                    <div class="story_chapter_title_image"><img id="chapter_main_img" src="" width="100%"  height="auto" alt=""/></div>
+                    <div class="story_chapter_second_image"><img id="chapter_second_img" src="" height="100%" alt=""/></div>
+                </div>
+                <!--  -->
+            </div>
+            <div id="story_media_player_container" class="story_audio_player">
+            	<div class="audio_player_progress_bar">
+            	<div class="audio_player_progress"><input type="range" id="story_audio_seek" value="0" max=""/></div>
+                </div>
+                <div class="audio_player_btns">
+                <table width="100%" cellpadding="0" cellspacing="0">
+                	<tr>
+                    	<td align="left" width="75px"><span id="story_audio_currenttime">0:00</span> / <strong><span id="story_audio_length">0:00</span></strong></td>
+                        <td align="center"><div id="story_backward_btn" class="audio_backward_btn"></div><div id="story_pause_btn" class="audio_pause_btn" style="display:none"></div><div id="story_play_btn" class="audio_play_btn"></div><div id="story_forward_btn" class="audio_forward_btn"></div></td>
+                        <td align="right" width="75px"><div id="story_mute_btn" class="audio_unmute_btn"></div><div id="story_unmute_btn" class="audio_mute_btn" style="display:none"></div></td>
+                    </tr>
+                </table>    
+                </div>    
+            </div>                
+        </div>
+        <div id="story_book_right_page">
+            <div id="story_text_content">
+            </div>
+            <div id="story_text_chapter_nav">
+            	<table width="100%" cellspacing="0" cellpadding="0">
+                	<tr>
+                    	<td align="left"><div id="story_text_prev_chapter_btn" class="story_text_nav_link">&lt;&lt; Back</div></td>
+                        <td align="right"><div id="story_text_next_chapter_btn" class="story_text_nav_link">Next &gt;&gt;</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+            
+            
+            
+            
+        </div>
+        
+        
+        
+    </div>
+    <div id="story_outcome_content" style="display:none"></div>  
+    <div id="mobile_version_controls">
+    	<table width="100%">
+        	<tr><td width="100%" align="center"><div id="switch_mobile_text_version_btn">Read the story &gt;&gt;</div><div id="switch_mobile_audio_version_btn" style="display:none">&lt;&lt; Audio &amp; Images</div></td></tr>
+        </table>
+    </div>  
+    </content>
+</body>
+</html>
