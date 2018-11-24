@@ -158,7 +158,7 @@ function load_up_story_audio(chapter) {
 	$('#story_audio_seek').unbind('timeupdate');
 	
 	if(chapter >= 1) {
-		story_audio = new Audio("../static/audio/location_' + chapter + '.mp3");
+		story_audio = new Audio("../static/audio/location_" + chapter + ".mp3");
 		
 	} else {
 		story_audio = new Audio("../static/audio/intro.mp3");
