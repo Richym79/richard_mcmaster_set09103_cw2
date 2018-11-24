@@ -66,8 +66,12 @@ $(function(){
 	$('#story_forward_btn').click(function() {
 		var curr_class = $(this).attr("class");
 		if(curr_class === "audio_forward_btn") {
-			var current_chapter = parseInt(chapter_no);
-			var chapter_to_show = current_chapter + 1;
+			var curr_chapter = $('#current_chapter').text();
+			var current_chapter = parseInt(curr_chapter);
+			var chapter_to_show = current_chapter + 1;			
+			// similar behavior as clicking on a link
+			window.location.href = "/Chapter" + chapter_to_show;
+				
 			//display_story_info(chapter_to_show);
 		}
 	});
