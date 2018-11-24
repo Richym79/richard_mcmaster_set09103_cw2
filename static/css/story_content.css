@@ -319,9 +319,9 @@
 	
 	.news_article_container {
 		position:relative;
-		top: 50%;
+		top: 1%;
 		left: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, 0%);
 		height:90%;
 		width:100%;
 	}
