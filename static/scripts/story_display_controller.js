@@ -78,7 +78,7 @@ $(function(){
 		display_story_info(chapter_to_show);
 	});
 	
-	$("#story_outcome_content").load("../static/content/story_content/outcome_option.html");
+	//$("#story_outcome_content").load("../static/content/story_content/outcome_option.html");
 	$(document).on('click','#story_outcome_option_1_btn',function(){
 		$('#story_book_container').css("display","none").fadeOut();
 		$('#outcome_option_1').css("display","inline-block").fadeIn();
@@ -150,21 +150,7 @@ var chapter_map_img;
 var chapter_second_image;
 
 function display_story_info(chapter) {
-	var story_dets = stories_array[chapter];
-	chapter_no = story_dets[0];
-	chapter_title = story_dets[1];
-	chapter_audio_src = story_dets[2];
-	chapter_text_content = story_dets[3];
-	chapter_location_lat = story_dets[4];
-	chapter_location_lng = story_dets[5];
-	chapter_main_img = story_dets[6];
-	chapter_map_img = story_dets[7];
-	chapter_second_image = story_dets[8];
-	
 	if(chapter >= 1) {
-		$('#chapter_no_text').text("Chapter " + chapter_no);
-		$('#chapter_title_text').html(chapter_title);	
-		$("#story_text_content").load("../static/content/story_content/location_" + chapter + ".html");
 		$('#story_text_prev_chapter_btn').css("display","block");
 		$('#story_backward_btn').removeClass("audio_backward_btn_disabled");
 		$('#story_backward_btn').addClass("audio_backward_btn");
@@ -180,19 +166,13 @@ function display_story_info(chapter) {
 		}
 		
 	} else {
-		$('#chapter_no_text').text("Introduction");
-		$('#chapter_title_text').html("The Burke &amp; Hare Story");
-		$("#story_text_content").load("../static/content/story_content/intro.html");
 		$('#story_text_prev_chapter_btn').css("display","none");
 		$('#story_backward_btn').removeClass("audio_backward_btn");
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
 	}
 	
-	$('#chapter_map_img').attr("src","../static/images/story_images/" + chapter_map_img);
-	$('#chapter_main_img').attr("src","../static/images/story_images/" + chapter_main_img);
-	$('#chapter_second_img').attr("src","../static/images/story_images/" + chapter_second_image);
 	//alert(stories_array[0]);
-	load_up_story_audio(chapter);
+	load_up_story_audio(0);
 	
 }
 
