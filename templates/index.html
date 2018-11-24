@@ -80,8 +80,9 @@
         </div>    
       {% endfor %}      
     
-    {% if selected_outcome >= '1' %}
-    <div id="story_outcome_content" style="display:none">
+    {% if 'selected_outcome' in globals(): %}
+    <div id="story_outcome_content">
+        visible
         <div id="outcome_option_1" class="news_article_container" style="display:none">
             <img src="../static/images/story_images/possible_outcome_1.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
