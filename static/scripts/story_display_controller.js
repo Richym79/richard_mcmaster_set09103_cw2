@@ -70,16 +70,18 @@ $(function(){
 			var current_chapter = parseInt(curr_chapter);
 			var chapter_to_show = current_chapter + 1;			
 			// similar behavior as clicking on a link
-			window.location.href = "/Chapter" + chapter_to_show;
+			window.location.href = "/chapter" + chapter_to_show + "/";
 				
 			//display_story_info(chapter_to_show);
 		}
 	});
 	
 	$('#story_text_next_chapter_btn').click(function() {
-		var current_chapter = parseInt(chapter_no);
-		var chapter_to_show = current_chapter + 1;
-		//display_story_info(chapter_to_show);
+		var curr_chapter = $('#current_chapter').text();
+			var current_chapter = parseInt(curr_chapter);
+			var chapter_to_show = current_chapter + 1;			
+			// similar behavior as clicking on a link
+			window.location.href = "/chapter" + chapter_to_show + "/";
 	});
 	
 	//$("#story_outcome_content").load("../static/content/story_content/outcome_option.html");
