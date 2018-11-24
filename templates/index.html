@@ -38,7 +38,7 @@
         
         	<div id="chapter_title_container">
         		<div class="story_chapter_title"><span id="chapter_no_text">
-                        {% if story["chapter"] >= "1": %}
+                        {% if story["chapter"] != "0": %}
                             Chapter {{story["chapter"]}}
                         <% endif %}
                     </span><br><span id="chapter_title_text">{{story["chapter_title"]}}</span></div>
