@@ -80,7 +80,15 @@
         </div>    
       {% endfor %}      
     
-    {% if outcome_selected > 0: %}
+    {%
+    outcome = 0
+    try:
+        outcome_selected       
+    except NameError:
+        outcome = 0
+    else:
+        outcome = outcome_selected
+    if outcome > 0: %}
     <div id="story_outcome_content">
         visible
         <div id="outcome_option_1" class="news_article_container" style="display:none">
