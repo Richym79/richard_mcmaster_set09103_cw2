@@ -1,7 +1,7 @@
 
 var stories_array=[];
 $(function(){
-	get_story_details();
+	//get_story_details();
 	
 	
 	
