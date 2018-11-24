@@ -154,10 +154,10 @@ function load_up_story_audio(chapter) {
 	$('#story_audio_seek').unbind('timeupdate');
 	
 	if(chapter >= 1) {
-		story_audio = new Audio("content/story_content/audio/location_' + chapter + '.mp3");
+		story_audio = new Audio("40280868/content/story_content/audio/location_' + chapter + '.mp3");
 		
 	} else {
-		story_audio = new Audio("content/story_content/audio/intro.mp3");
+		story_audio = new Audio("40280868/richard_mcmaster_set09103_cw2/static/content/story_content/audio/intro.mp3");
 	}
 	
 	story_audio.addEventListener('loadedmetadata', function() {
