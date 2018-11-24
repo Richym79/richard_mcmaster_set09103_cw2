@@ -953,6 +953,7 @@
 		transform: translate(-50%,-50%);
 		height:90%;
 		width:auto;
+		text-align=center;
 	}
 	
 	.news_article_img {
