@@ -98,27 +98,19 @@ $(function(){
 	
 	//$("#story_outcome_content").load("../static/content/story_content/outcome_option.html");
 	$(document).on('click','#story_outcome_option_1_btn',function(){
-		$('#story_book_container').css("display","none").fadeOut();
-		$('#outcome_option_1').css("display","inline-block").fadeIn();
-		$('#story_outcome_content').css("display","inline-block").fadeIn();
+		window.location.href = "/outcome1/";
 	});
 	
 	$(document).on('click','#story_outcome_option_2_btn',function(){
-		$('#story_book_container').css("display","none").fadeOut();
-		$('#outcome_option_2').css("display","inline-block").fadeIn();
-		$('#story_outcome_content').css("display","inline-block").fadeIn();
+		window.location.href = "/outcome2/";;
 	});
 	
 	$(document).on('click','#story_outcome_option_3_btn',function(){
-		$('#story_book_container').css("display","none").fadeOut();
-		$('#outcome_option_3').css("display","inline-block").fadeIn();
-		$('#story_outcome_content').css("display","inline-block").fadeIn();
+		window.location.href = "/outcome3/";
 	});
 	
 	$(document).on('click','#story_outcome_option_4_btn',function(){
-		$('#story_book_container').css("display","none").fadeOut();
-		$('#outcome_option_4').css("display","inline-block").fadeIn();
-		$('#story_outcome_content').css("display","inline-block").fadeIn();
+		window.location.href = "/outcome4/";
 	});
 	
 	display_story_info();
