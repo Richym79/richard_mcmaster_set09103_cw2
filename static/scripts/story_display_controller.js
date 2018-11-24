@@ -120,7 +120,7 @@ function display_story_info(chapter) {
 		$('#story_text_prev_chapter_btn').css("display","block");
 		$('#story_backward_btn').removeClass("audio_backward_btn_disabled");
 		$('#story_backward_btn').addClass("audio_backward_btn");
-		
+		$("#story_text_content").load("../static/content/location_" + chapter + ".html");
 		if(chapter >= 7) {
 			$('#story_text_next_chapter_btn').css("display","none");	
 			$('#story_forward_btn').removeClass("audio_forward_btn");
@@ -135,8 +135,9 @@ function display_story_info(chapter) {
 		$('#story_text_prev_chapter_btn').css("display","none");
 		$('#story_backward_btn').removeClass("audio_backward_btn");
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
+		$("#story_text_content").load("../static/content/intro.html");
 	}
-	$("#story_text_content").load("../static/content/story_content/location_" + chapter + ".html");
+	
 	load_up_story_audio(chapter);
 	
 }
