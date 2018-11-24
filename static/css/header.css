@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+#header_logo {
+		display:inline-block;
+		float:left;
+		margin-left:5px;
+		margin-top:0px;
+		width:150px;
+		height:150px;
+	}
+	
+	#header_menu_btn {
+		display:inline-block;
+		float:right;
+		margin-right:5px;
+		margin-top:0px;
+		width:150px;
+		height:150px;	
+	}
+
+
+/* Start of Mobile query */
+@media (max-width: 740px){
+	
+}
+
+/* End of Mobile query */
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Start of tablet query */
+@media (min-width: 741px) and (max-width: 1023px){
+	
+}
+
+/* End of tablet query */
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Start of desktop query */
+@media (min-width: 1024px){
+	
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/

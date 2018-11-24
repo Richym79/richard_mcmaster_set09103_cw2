@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+/* Start of Mobile query */
+@media (max-width: 740px){
+#central_content_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 90%;
+	height: auto;
+	z-index:14;
+	overflow:hidden;
+}
+}
+
+/* End of Mobile query */
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Start of tablet query */
+@media (min-width: 741px) and (max-width: 1023px){
+#central_content_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 70%;
+	height: auto;
+	z-index:14;
+	overflow:hidden;
+}
+}
+
+/* End of tablet query */
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Start of desktop query */
+@media (min-width: 1024px){
+#central_content_container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 50%;
+	height: 50%;
+	z-index:14;
+	overflow:hidden;
+}
+}
+/*----------------------------------------------------------------------------------------------------------------------------------------------*/
