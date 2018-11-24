@@ -145,7 +145,8 @@ function display_story_info() {
 		}
 		
 	} else {
-		$('#chapter_no_text').text("");
+		$('#chapter_no_text').text("Introduction");
+		$('#chapter_title_text').text("Welcome to the Burke &amp; Hare story");
 		$('#story_text_prev_chapter_btn').css("display","none");
 		$('#story_backward_btn').removeClass("audio_backward_btn");
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
