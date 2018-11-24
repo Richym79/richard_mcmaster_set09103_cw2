@@ -42,7 +42,7 @@
                 <!--  -->
                 <div id="story_main_img_container">
                 	<div class="story_chapter_map_image"><img id="chapter_map_img" src="{{story["old_map_img"]}}" height="100%" alt=""/></div>
-                    <div class="story_chapter_title_image"><img id="chapter_main_img" src="{{story["main_image"]}}" width="100%"  height="auto" alt=""/></div>
+                    <div class="story_chapter_title_image"><img id="chapter_main_img" src="{{ url_for('static', filename='images/'{{story["main_image"]}}) }}" width="100%"  height="auto" alt=""/></div>
                     <div class="story_chapter_second_image"><img id="chapter_second_img" src="{{story["secondary_image"]}}" height="100%" alt=""/></div>
                 </div>
                 <!--  -->
