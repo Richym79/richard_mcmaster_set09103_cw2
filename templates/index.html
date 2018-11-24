@@ -84,19 +84,26 @@
     
     {% if outcome_selected != "0": %}
     <div id="story_outcome_content">
-        visible
+        {% if outcome_selected == "1": %}
         <div id="outcome_option_1" class="news_article_container" style="display:none">
             <img src="../static/images/story_images/possible_outcome_1.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
+        {% endif %}
+        {% if outcome_selected == "2: %}
         <div id="outcome_option_2" class="news_article_container" style="display:none">
             <img src="../static/images/story_images/possible_outcome_2.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
+        {% endif %}
+        {% if outcome_selected == "3": %}
         <div id="outcome_option_3" class="news_article_container" style="display:none">
             <img src="../static/images/story_images/possible_outcome_3.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
+        {% endif %}
+        {% if outcome_selected == "4": %}
         <div id="outcome_option_4" class="news_article_container" style="display:none">
             <img src="../static/images/story_images/possible_outcome_4.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
+        {% endif %}
     </div>
     {% endif %}
     
