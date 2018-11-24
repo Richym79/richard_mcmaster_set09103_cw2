@@ -53,14 +53,14 @@ $(function(){
 		if(curr_class === "audio_backward_btn") {
 			var current_chapter = parseInt(chapter_no);
 			var chapter_to_show = current_chapter - 1;
-			display_story_info(chapter_to_show);
+			//display_story_info(chapter_to_show);
 		}
 	});
 	
 	$('#story_text_prev_chapter_btn').click(function() {
 		var current_chapter = parseInt(chapter_no);
 		var chapter_to_show = current_chapter - 1;
-		display_story_info(chapter_to_show);
+		//display_story_info(chapter_to_show);
 	});
 	
 	$('#story_forward_btn').click(function() {
@@ -68,14 +68,14 @@ $(function(){
 		if(curr_class === "audio_forward_btn") {
 			var current_chapter = parseInt(chapter_no);
 			var chapter_to_show = current_chapter + 1;
-			display_story_info(chapter_to_show);
+			//display_story_info(chapter_to_show);
 		}
 	});
 	
 	$('#story_text_next_chapter_btn').click(function() {
 		var current_chapter = parseInt(chapter_no);
 		var chapter_to_show = current_chapter + 1;
-		display_story_info(chapter_to_show);
+		//display_story_info(chapter_to_show);
 	});
 	
 	//$("#story_outcome_content").load("../static/content/story_content/outcome_option.html");
@@ -109,45 +109,9 @@ function story_audio_ended() {
 	
 }
 
-var stories_array=[];
-function get_story_details() {
-	stories_array=[];
-	//alert("Getting json file");
-	$.get("../static/content/story_content.json", function(data, status){
-		//var parsed_data = JSON.parse(data); 
-		for (var i in data){
-				var StoryToPush = [];
-				//alert(data[i]['chapter']);
-				var story_row = data[i];
-				//alert(story_row['chapter']);
-				StoryToPush[0] = story_row['chapter'];
-				StoryToPush[1] = story_row['chapter_title'];
-				StoryToPush[2] = story_row['audio_src'];
-				StoryToPush[3] = story_row['text_content_source'];
-				StoryToPush[4] = story_row['location_lat'];
-				StoryToPush[5] = story_row['location_lng'];
-				StoryToPush[6] = story_row['main_image'];
-				StoryToPush[7] = story_row['old_map_img'];
-				StoryToPush[8] = story_row['secondary_image'];
-				stories_array.push(StoryToPush);
-		}
-		display_story_info(0);
-    });
-}
 
 
 
-
-var story_dets;
-var chapter_no;
-var chapter_title;
-var chapter_audio_src;
-var chapter_text_content;
-var chapter_location_lat;
-var chapter_location_lng;
-var chapter_main_img;
-var chapter_map_img;
-var chapter_second_image;
 
 function display_story_info(chapter) {
 	if(chapter >= 1) {
@@ -171,8 +135,7 @@ function display_story_info(chapter) {
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
 	}
 	
-	//alert(stories_array[0]);
-	load_up_story_audio(0);
+	load_up_story_audio(chapter);
 	
 }
 
@@ -189,9 +152,9 @@ function load_up_story_audio(chapter) {
 	$('#story_audio_seek').unbind('timeupdate');
 	
 	if(chapter >= 1) {
-		story_audio = new Audio('../static/content/story_content/audio/location_' + chapter + '.mp3');
+		story_audio = new Audio('static/content/story_content/audio/location_' + chapter + '.mp3');
 	} else {
-		story_audio = new Audio('../static/content/story_content/audio/intro.mp3');
+		story_audio = new Audio('static/content/story_content/audio/intro.mp3');
 	}
 	
 	story_audio.addEventListener('loadedmetadata', function() {
