@@ -9,7 +9,7 @@ body:after{
 /* CSS Document */
 @font-face {
 	font-family: "Blackadder";
-	src: URL('../css/blackadder_font/itcblkad.ttf') format('truetype');
+	src: URL('../css/itcblkad.ttf') format('truetype');
 }
 body {
 	color: #000000;
