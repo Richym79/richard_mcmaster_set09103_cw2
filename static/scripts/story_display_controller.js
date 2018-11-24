@@ -103,6 +103,8 @@ $(function(){
 		$('#story_outcome_content').css("display","inline-block").fadeIn();
 	});
 	
+	display_story_info(0);
+	
 });	
 
 function story_audio_ended() {
