@@ -4,14 +4,16 @@ app = Flask(__name__)
 @app.route('/')
 def root():
 	story_data = []
+	chapter_title = "";
 	with app.open_resource('static/json/story_content.json') as stories:
 		story_array = json.load(stories)
 		total_stories = len(story_array)
 		for story in story_array:
-			story_data.append(story)	
-	
-	story_arr_length = len(story_data)			
-	return render_template('index.html', stories=total_stories, arr_len=story_arr_length, story=story_data)
+			story_chapter = str(story['chapter'])
+			if story_chapter == "0":
+				story_data.append(story)	
+				
+	return render_template('index.html', story_data=story_data)
 
 @app.route('/chapter1/')
 def chapter1():
