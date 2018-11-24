@@ -1,10 +1,7 @@
 
-var stories_array=[];
+
 $(function(){
-	//get_story_details();
-	
-	
-	
+		
 	$('#switch_mobile_text_version_btn').click(function() {
 		//alert("text link clicked");
 		$('#story_book_container').removeClass("story_book_initial_view");
@@ -38,8 +35,7 @@ $(function(){
 	$('#story_backward_btn').click(function() {
 		story_audio.currentTime = 0;
 	});
-	
-	
+
 	$('#story_mute_btn').click(function() {
 		story_audio.muted = true;
 		$('#story_mute_btn').css("display","none").fadeOut();
@@ -51,8 +47,7 @@ $(function(){
 		$('#story_unmute_btn').css("display","none").fadeOut();
 		$('#story_mute_btn').css("display","inline-block").fadeIn();
 	});
-	
-	
+
 	$('#story_backward_btn').click(function() {
 		var curr_class = $(this).attr("class");
 		if(curr_class === "audio_backward_btn") {
@@ -108,28 +103,7 @@ $(function(){
 		$('#story_outcome_content').css("display","inline-block").fadeIn();
 	});
 	
-	getLocation();
 });	
-
-
-var geo_curr_pos;
-function getLocation() {
-	geo_curr_pos = "";
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        geo_curr_pos = "Geolocation Error";
-		alert(geo_curr_pos);
-    }
-}
-function showPosition(position) {
-    geo_curr_pos = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-	alert(geo_curr_pos); 
-}
-
-
-
 
 function story_audio_ended() {
 	
