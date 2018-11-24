@@ -51,16 +51,20 @@ $(function(){
 	$('#story_backward_btn').click(function() {
 		var curr_class = $(this).attr("class");
 		if(curr_class === "audio_backward_btn") {
-			var current_chapter = parseInt(chapter_no);
-			var chapter_to_show = current_chapter - 1;
-			//display_story_info(chapter_to_show);
+			var curr_chapter = $('#current_chapter').text();
+			var current_chapter = parseInt(curr_chapter);
+			var chapter_to_show = current_chapter - 1;			
+			// similar behavior as clicking on a link
+			window.location.href = "/chapter" + chapter_to_show + "/";
 		}
 	});
 	
 	$('#story_text_prev_chapter_btn').click(function() {
-		var current_chapter = parseInt(chapter_no);
-		var chapter_to_show = current_chapter - 1;
-		//display_story_info(chapter_to_show);
+		var curr_chapter = $('#current_chapter').text();
+			var current_chapter = parseInt(curr_chapter);
+			var chapter_to_show = current_chapter - 1;			
+			// similar behavior as clicking on a link
+			window.location.href = "/chapter" + chapter_to_show + "/";
 	});
 	
 	$('#story_forward_btn').click(function() {
