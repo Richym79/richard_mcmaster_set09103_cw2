@@ -47,6 +47,7 @@
                 </div>
                 <!--  -->
             </div>
+             <div id="audio_url_path" style="display:none">{{ url_for('static', filename='content/story_content/audio'+story["audio_src"])}}</div>
             <div id="story_media_player_container" class="story_audio_player">
             	<div class="audio_player_progress_bar">
             	<div class="audio_player_progress"><input type="range" id="story_audio_seek" value="0" max=""/></div>
