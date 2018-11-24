@@ -957,6 +957,9 @@
 	}
 	
 	.news_article_img {
+		position:relative;
+		margin-left:auto;
+		margin-right:auto;
 		-webkit-box-shadow: 1px 3px 5px rgba(0,0,0,1.00);
 		box-shadow: 1px 5px 10px rgba(0,0,0,1.00);
 	}
