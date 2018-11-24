@@ -944,7 +944,7 @@
 		left: 50%;
 		transform: translate(-50%,-50%);
 		height:90%;
-		width:100px;
+		width:auto;
 	}
 	
 	.news_article_img {
