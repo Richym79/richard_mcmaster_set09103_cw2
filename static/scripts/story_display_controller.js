@@ -129,6 +129,7 @@ function display_story_info() {
 	var curr_chapter = $('#current_chapter').text();
 	var curr_chapter = parseInt(curr_chapter);
 	if(curr_chapter >= 1) {
+		$('#chapter_no_text').text("Chapter " + chapter_no);
 		$('#story_text_prev_chapter_btn').css("display","block");
 		$('#story_backward_btn').removeClass("audio_backward_btn_disabled");
 		$('#story_backward_btn').addClass("audio_backward_btn");
@@ -144,6 +145,7 @@ function display_story_info() {
 		}
 		
 	} else {
+		$('#chapter_no_text').text("");
 		$('#story_text_prev_chapter_btn').css("display","none");
 		$('#story_backward_btn').removeClass("audio_backward_btn");
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
