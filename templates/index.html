@@ -80,7 +80,7 @@
         </div>    
       {% endfor %}      
     
-    {% if 'selected_outcome' in globals(): %}
+    {% for outcome in selected_outcome %}
     <div id="story_outcome_content">
         visible
         <div id="outcome_option_1" class="news_article_container" style="display:none">
@@ -96,7 +96,8 @@
             <img src="../static/images/story_images/possible_outcome_4.jpg" style="height:100%; object-fit: contain" height="100%" alt="" class="news_article_img"/> 
         </div>
     </div>
-    {% endif %}
+    {% endfor %}
+    
     <div id="mobile_version_controls">
     	<table width="100%">
         	<tr><td width="100%" align="center"><div id="switch_mobile_text_version_btn">Read the story &gt;&gt;</div><div id="switch_mobile_audio_version_btn" style="display:none">&lt;&lt; Audio &amp; Images</div></td></tr>
