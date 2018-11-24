@@ -123,15 +123,15 @@ def outcome1():
 	return render_template('index.html', outcome_selected="1")
 
 @app.route('/outcome2/')
-def outcome1():
+def outcome2():
 	return render_template('index.html', outcome_selected="2")
 
 @app.route('/outcome3/')
-def outcome1():
+def outcome3():
 	return render_template('index.html', outcome_selected="3")
 
 @app.route('/outcome4/')
-def outcome1():
+def outcome4():
 	return render_template('index.html', outcome_selected="4")
 
 if __name__ == '__main__':
