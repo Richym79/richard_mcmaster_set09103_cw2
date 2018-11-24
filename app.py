@@ -12,7 +12,7 @@ def root():
 			if story_chapter == "0":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter1/')
 def chapter1():
@@ -25,7 +25,7 @@ def chapter1():
 			if story_chapter == "1":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter2/')
 def chapter2():
@@ -38,7 +38,7 @@ def chapter2():
 			if story_chapter == "2":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter3/')
 def chapter3():
@@ -51,7 +51,7 @@ def chapter3():
 			if story_chapter == "3":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter4/')
 def chapter4():
@@ -64,7 +64,7 @@ def chapter4():
 			if story_chapter == "4":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter5/')
 def chapter5():
@@ -77,7 +77,7 @@ def chapter5():
 			if story_chapter == "5":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
     
 @app.route('/chapter6/')
 def chapter6():
@@ -90,7 +90,7 @@ def chapter6():
 			if story_chapter == "6":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter7/')
 def chapter7():
@@ -103,7 +103,7 @@ def chapter7():
 			if story_chapter == "7":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/chapter8/')
 def chapter8():
@@ -116,7 +116,7 @@ def chapter8():
 			if story_chapter == "8":
 				story_data.append(story)	
 				
-	return render_template('index.html', story_data=story_data)
+	return render_template('index.html', story_data=story_data, outcome_selected="0")
 
 @app.route('/outcome1/')
 def outcome1():
