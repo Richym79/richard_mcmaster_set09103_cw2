@@ -136,7 +136,7 @@ function display_story_info(chapter) {
 		$('#story_backward_btn').removeClass("audio_backward_btn");
 		$('#story_backward_btn').addClass("audio_backward_btn_disabled");
 	}
-	
+	$("#story_text_content").load("../static/content/story_content/location_" + chapter + ".html");
 	load_up_story_audio(chapter);
 	
 }
