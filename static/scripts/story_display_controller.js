@@ -55,7 +55,11 @@ $(function(){
 			var current_chapter = parseInt(curr_chapter);
 			var chapter_to_show = current_chapter - 1;			
 			// similar behavior as clicking on a link
-			window.location.href = "/chapter" + chapter_to_show + "/";
+			if(chapter_to_show >= 1) {
+				window.location.href = "/chapter" + chapter_to_show + "/";
+			} else {
+				window.location.href = "/";
+			}
 		}
 	});
 	
@@ -64,7 +68,11 @@ $(function(){
 			var current_chapter = parseInt(curr_chapter);
 			var chapter_to_show = current_chapter - 1;			
 			// similar behavior as clicking on a link
-			window.location.href = "/chapter" + chapter_to_show + "/";
+			if(chapter_to_show >= 1) {
+				window.location.href = "/chapter" + chapter_to_show + "/";
+			} else {
+				window.location.href = "/";
+			}
 	});
 	
 	$('#story_forward_btn').click(function() {
