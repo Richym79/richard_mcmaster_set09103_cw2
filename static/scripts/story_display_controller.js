@@ -120,7 +120,13 @@ $(function(){
 });	
 
 function story_audio_ended() {
-	
+	var curr_chapter = $('#current_chapter').text();
+	var current_chapter = parseInt(curr_chapter);
+	var chapter_to_show = current_chapter + 1;			
+	// similar behavior as clicking on a link
+	if(chapter_to_show < 8) {
+		window.location.href = "/chapter" + chapter_to_show + "/";
+	}
 }
 
 
