@@ -335,6 +335,12 @@
 		max-height:100%;
 		max-width:100%;
 	}
+	
+	#outcome_continue_btn {
+		position:absolute;
+		bottom:5px;
+		width:100%;
+	}
 }
 
 /* End of Mobile query */
@@ -639,6 +645,12 @@
 		max-height:100%;
 		max-width:100%;
 	}
+	
+	#outcome_continue_btn {
+		position:absolute;
+		bottom:5px;
+		width:100%;
+	}
 }
 
 /* End of tablet query */
@@ -939,6 +951,12 @@
     		margin-right: auto;
 		max-height:100%;
 		max-width:100%;
+	}
+	
+	#outcome_continue_btn {
+		position:absolute;
+		bottom:5px;
+		width:100%;
 	}
 }
 /*----------------------------------------------------------------------------------------------------------------------------------------------*/
