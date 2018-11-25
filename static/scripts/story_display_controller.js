@@ -1,7 +1,9 @@
 
 
 $(function(){
-		
+	$('#outcome_continue_btn').click(function() {
+		window.location.href = "/chapter8/";
+	});	
 	$('#switch_mobile_text_version_btn').click(function() {
 		//alert("text link clicked");
 		$('#story_book_container').removeClass("story_book_initial_view");
